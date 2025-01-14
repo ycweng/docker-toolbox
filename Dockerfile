@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # 安裝必要的工具
-RUN apk --no-cache add iputils curl netcat-openbsd aws-cli bash
+RUN apk --no-cache add iputils curl netcat-openbsd aws-cli bash git
 COPY motd /etc/motd
 RUN echo "cat /etc/motd" >> ~/.bashrc
 # 設定工作目錄
