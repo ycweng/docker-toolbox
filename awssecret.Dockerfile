@@ -9,7 +9,7 @@ RUN addgroup -g 1000 appuser && \
 
 
 # 安裝必要的工具
-RUN apk --no-cache add iputils curl netcat-openbsd aws-cli bash git jq openssh-client sshpass websocat
+RUN apk --no-cache add curl aws-cli bash kubectl
 COPY motd /etc/motd
 RUN echo "cat /etc/motd" >> ~/.bashrc
 # 設定工作目錄
